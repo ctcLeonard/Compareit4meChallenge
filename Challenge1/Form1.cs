@@ -56,6 +56,8 @@ namespace Challenge1
 			{
 				connection.AddEntry(entry);
 			}
+
+			MessageBox.Show("Data successfully added to database");
 		}
 	}
 }
