@@ -1,0 +1,35 @@
+﻿@model TemperatureConverter.Web.Models.TemperatureViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    
+    <h2>Temperature Converter</h2>
+
+
+
+    @using (Html.BeginForm("Calculate", "Home"))
+    {
+        <text>From</text>
+        @Html.DropDownListFor(m => m.SelectedFrom, Model.Types)
+
+
+        <br />
+
+        <text>To</text>
+        @Html.DropDownListFor(m => m.SelectedTo, Model.Types)
+
+        <br />
+
+        <text>Amount</text>
+        @Html.TextBoxFor(m => m.Amount)
+
+
+        <input type="submit" value="Calculate" />
+
+        <br />
+        <text>Result: </text> @Html.DisplayFor(m => m.Result)
+    }
+</div>
